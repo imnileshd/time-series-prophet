@@ -85,7 +85,7 @@ fig.show()
 ```
 
 <!-- Add ts_prophet_raw_data here -->
-{% include /plots/ts_prophet_raw_data.html %}
+![ts_prophet_raw_data](/images/ts_prophet_raw_data.png)
 <!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/3.embed"></iframe> -->
 
 We can see the trend in average price over time. Such patterns we expect the forecast model should consider.
@@ -145,7 +145,8 @@ plot_plotly(m, forecast)
 ```
 
 <!-- Add ts_prophet_forecast here -->
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/5.embed"></iframe>
+![ts_prophet_forecast](/images/ts_prophet_forecast.png)
+<!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/5.embed"></iframe> -->
 
 You can also add change-points (where the trend model is shifting) to the plot like this:
 
@@ -164,7 +165,8 @@ plot_plotly(m, forecast, changepoints=True)
 ```
 
 <!-- Add ts_prophet_changepoints here -->
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/7.embed"></iframe>
+![ts_prophet_changepoints](/images/ts_prophet_changepoints.png)
+<!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/7.embed"></iframe> -->
 
 ### Plotting the forecasted components
 
@@ -181,7 +183,8 @@ plot_components_plotly(m, forecast)
 ```
 
 <!-- Add ts_prophet_components here -->
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/9.embed"></iframe>
+![ts_prophet_components](/images/ts_prophet_components.png)
+<!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/9.embed"></iframe> -->
 
 Prophet learns that price is usually going up from July to December.
 

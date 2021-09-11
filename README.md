@@ -85,10 +85,7 @@ fig.show()
 ```
 
 <!-- Add ts_prophet_raw_data here -->
-<div>
-    <a href="https://plotly.com/~ai.nileshd/3/?share_key=shwrBbTHltQR00tZ79saEC" target="_blank" title="ts_prophet_raw_data" style="display: block; text-align: center;"><img src="https://plotly.com/~ai.nileshd/3.png?share_key=shwrBbTHltQR00tZ79saEC" alt="ts_prophet_raw_data" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-    <script data-plotly="ai.nileshd:3" sharekey-plotly="shwrBbTHltQR00tZ79saEC" src="https://plotly.com/embed.js" async></script>
-</div>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/3.embed"></iframe>
 
 We can see the trend in average price over time. Such patterns we expect the forecast model should consider.
 
@@ -147,11 +144,7 @@ plot_plotly(m, forecast)
 ```
 
 <!-- Add ts_prophet_forecast here -->
-
-<div>
-    <a href="https://plotly.com/~ai.nileshd/5/?share_key=3Gz8FW9a3cMaKuxaPM0UjS" target="_blank" title="ts_prophet_forecast" style="display: block; text-align: center;"><img src="https://plotly.com/~ai.nileshd/5.png?share_key=3Gz8FW9a3cMaKuxaPM0UjS" alt="ts_prophet_forecast" style="max-width: 100%;width: 900px;"  width="900" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-    <script data-plotly="ai.nileshd:5" sharekey-plotly="3Gz8FW9a3cMaKuxaPM0UjS" src="https://plotly.com/embed.js" async></script>
-</div>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/5.embed"></iframe>
 
 You can also add change-points (where the trend model is shifting) to the plot like this:
 
@@ -170,11 +163,7 @@ plot_plotly(m, forecast, changepoints=True)
 ```
 
 <!-- Add ts_prophet_changepoints here -->
-
-<div>
-    <a href="https://plotly.com/~ai.nileshd/7/?share_key=uqjOnR4uDymHNPZw2dQjpn" target="_blank" title="ts_prophet_changepoints" style="display: block; text-align: center;"><img src="https://plotly.com/~ai.nileshd/7.png?share_key=uqjOnR4uDymHNPZw2dQjpn" alt="ts_prophet_changepoints" style="max-width: 100%;width: 900px;"  width="900" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-    <script data-plotly="ai.nileshd:7" sharekey-plotly="uqjOnR4uDymHNPZw2dQjpn" src="https://plotly.com/embed.js" async></script>
-</div>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/7.embed"></iframe>
 
 ### Plotting the forecasted components
 
@@ -191,11 +180,7 @@ plot_components_plotly(m, forecast)
 ```
 
 <!-- Add ts_prophet_components here -->
-
-<div>
-    <a href="https://plotly.com/~ai.nileshd/9/?share_key=eYvWDVL69NbplTWor3ni0N" target="_blank" title="ts_prophet_components" style="display: block; text-align: center;"><img src="https://plotly.com/~ai.nileshd/9.png?share_key=eYvWDVL69NbplTWor3ni0N" alt="ts_prophet_components" style="max-width: 100%;width: 900px;"  width="900" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-    <script data-plotly="ai.nileshd:9" sharekey-plotly="eYvWDVL69NbplTWor3ni0N" src="https://plotly.com/embed.js" async></script>
-</div>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/9.embed"></iframe>
 
 Prophet learns that price is usually going up from July to December.
 

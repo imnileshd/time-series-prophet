@@ -54,6 +54,11 @@ df = pd.read_csv("data/avocado.csv")
 df.head(2)
 ```
 
+|Unnamed: 0|Date|AveragePrice|Total Volume|4046|4225|4770|Total Bags|Small Bags|Large Bags|XLarge Bags|type|year|region|
+|--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
+|0|2015-12-27|1.33|64236.62|1036.74|54454.85|48.16|8696.87|8603.62|93.25|0.0|conventional|2015|Albany|
+|1|2015-12-20|1.35|54876.98|674.28|44638.81|58.33|9505.56|9408.07|97.49|0.0|conventional|2015|Albany|
+
 For simplicity, we'll only select the `AveragePrice` prices for `conventional` avocodos from dataset
 
 ```python
@@ -74,6 +79,11 @@ df_avocado = df_avocado[['Date', 'AveragePrice']].reset_index(drop=True)
 df_avocado.rename(columns={'Date':'ds', 'AveragePrice':'y'}, inplace=True)
 df_avocado.head(2)
 ```
+
+||ds|y|
+|--- |--- |--- |
+|0|2015-01-04|0.93|
+|1|2015-01-04|1.10|
 
 It's always a good idea to plot the data to get a first impression on what we are dealing with. We'll plot.ly for plotting  charts.
 
@@ -116,6 +126,11 @@ future = m.make_future_dataframe(periods=365)
 future.tail(2)
 ```
 
+||ds|
+|--- |--- |
+|532|2019-03-24|
+|533|2019-03-25|
+
 Now, Create the forecast object which will hold all of the resulting data from the forecast.
 
 ```python
@@ -127,6 +142,11 @@ When listing the forecast dataframe we get:
 ```python
 forecast.head(2)
 ```
+
+||ds|yhat_lower|yhat_upper|yhat|
+|--- |--- |--- |--- |--- |
+|0|2015-01-04|0.805868|1.368417|1.103528|
+|1|2015-01-11|0.864619|1.381266|1.117847|
 
 The `yhat` contains the predictions and then you have lower and upper bands of the predictions.
 
@@ -229,6 +249,11 @@ from fbprophet.diagnostics import performance_metrics
 df_p = performance_metrics(df_cv)
 df_p.head(2)
 ```
+
+||horizon|mse|rmse|mae|mape|mdape|coverage|
+|--- |--- |--- |--- |--- |--- |--- |--- |
+|0|19 days|0.077039|0.277560|0.224990|0.191728|0.147702|0.601132|
+|1|20 days|0.077200|0.277849|0.225041|0.191624|0.146887|0.602669|
 
 Cross validation performance metrics can be visualized with `plot_cross_validation_metric`, here shown for MAPE. Dots show the absolute percent error for each prediction in df_cv. The blue line shows the MAPE.
 

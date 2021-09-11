@@ -271,6 +271,21 @@ fig = plot_cross_validation_metric(df_cv, metric='mape')
 
 You can further improve your models by adding holidays, adding extra regressors and by tuning hyperparameters. Learn more from [here](https://facebook.github.io/prophet/docs/quick_start.html#python-api).
 
+## Saving/Loading Prophet models
+
+Here Prophet provides the built-in serialization functions to serialize the model to json:
+
+```python
+import json
+from fbprophet.serialize import model_to_json, model_from_json
+
+with open('models/model_avocados_avg_prices.json', 'w') as fout:
+    json.dump(model_to_json(m), fout)  # Save model
+
+with open('models/model_avocados_avg_prices.json', 'r') as fin:
+    m = model_from_json(json.load(fin))  # Load model
+```
+
 ## Conclusion
 
 In this article, you have learned how to use the Facebook Prophet package to make time series forecasts. We have learned how to fit the model over dataset and make future predictions, plot the results, validate and look at the performance metrics.

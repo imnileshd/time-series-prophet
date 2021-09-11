@@ -85,7 +85,8 @@ fig.show()
 ```
 
 <!-- Add ts_prophet_raw_data here -->
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/3.embed"></iframe>
+{% include /plots/ts_prophet_raw_data.html %}
+<!-- <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ai.nileshd/3.embed"></iframe> -->
 
 We can see the trend in average price over time. Such patterns we expect the forecast model should consider.
 
